@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<form method=post action="">
+<table>
+  {% for field in form %}
+    <tr>
+        <td>{{ field.label }}</td>
+        <td>{{ field }}</td>
+        <!-- <td>{{ field.name }}</td> -->
+    </tr>
+  {% endfor %}
+</table>
+<p><input type=submit value=Compute></form></p>
+
+<p>
+{% if result != None %}
+<img src="{{ result }}" width="500">
+{% endif %}
+</p>
+
+
+</body>
+</html>
